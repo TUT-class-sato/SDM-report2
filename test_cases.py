@@ -11,7 +11,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (21, calc(3,7))
 
         def test_sample2 (self):
-                self.assertEqual (100, calc(2.5, 40))
+                self.assertEqual (-1, calc(2.5, 40))
 
         def test_sample3 (self):
                 self.assertEqual (-1, calc(400, 90))
