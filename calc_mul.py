@@ -5,7 +5,7 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\d+)?') #整数だけ
+        p = re.compile('^[-+]?[0-9]+$') #整数だけ
         if p.match(ai) and p.match(bi): #change "or" to "and"
                 a=float(ai)
                 b=float(bi)
