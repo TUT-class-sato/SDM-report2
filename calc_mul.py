@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+#変更しました　git2
 import re
                 
 def calc(A,B):
