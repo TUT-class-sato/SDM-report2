@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-#引数を修正
-
 import unittest
 from calc_mul import calc
 
@@ -63,17 +61,3 @@ class TestCalc (unittest.TestCase):
         #1未満の整数
         def test_sample11 (self):
                 self.assertEqual (-1, calc(123,0))
-
-        # #有効同値
-
-        # #1から999の間でA>Bとなる整数
-        # def test_sample12 (self):
-        #         self.assertEqual (-1, calc(987,654))
-
-        # #1から999の間でA<Bとなる整数
-        # def test_sample13 (self):
-        #         self.assertEqual (-1, calc(123,321))
-
-        # #1から999の間でA=Bとなる整数
-        # def test_sample14 (self):
-        #         self.assertEqual (-1, calc(555,555))
