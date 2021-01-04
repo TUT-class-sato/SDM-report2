@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+#引数を修正
+
 import unittest
 from calc_mul import calc
 
