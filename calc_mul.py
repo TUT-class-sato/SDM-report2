@@ -6,7 +6,7 @@ def calc(A,B):
         ai=str(A)
         bi=str(B)
         p = re.compile('\d+')
-        if p.match(ai) and p.match(bi):
+        if p.fullmatch(ai) and p.fullmatch(bi):
                 a=int(ai)
                 b=int(bi)
                 if 1<=a and a<=999 and 1<=b and b<=999:
