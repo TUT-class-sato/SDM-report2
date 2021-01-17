@@ -13,7 +13,7 @@ def calc(A, B):
     p = re.compile('^(?=.*\d)(?!.*\.).*$')
 
     # 入力が条件を満たすかの判定
-    if p.match(ai) or p.match(bi):  # pに対してaiまたはbiがマッチするとき
+    if p.match(ai) and p.match(bi):  # pに対してaiまたはbiがマッチするとき
         a = float(ai)
         b = float(bi)
         # 数字の大きさ判定
