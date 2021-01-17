@@ -6,7 +6,6 @@ from calc_mul import calc
 # Run with testrunner so needs to be in file test_
 
 class TestCalc (unittest.TestCase):
-
         # 1から999
         def test_sample1 (self):
                 self.assertEqual (21, calc(3,7))
