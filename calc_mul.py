@@ -6,7 +6,7 @@ import re
 def calc(A, B):
     ai = str(A)
     bi = str(B)
-    # p = re.compile('\d+(\.\d+)?')
+    # Handle integer with regular expression
     p = re.compile('^[-+]?\d*$')
     if p.match(ai) and p.match(bi):
         a = int(ai)
