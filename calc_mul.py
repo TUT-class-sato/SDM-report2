@@ -1,18 +1,26 @@
 #!/usr/bin/python3
 
 import re
-                
+
+             
 def calc(A,B):
         ai=str(A)
         bi=str(B)
         p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
+        if p.match(ai) and p.match(bi):
+                parameter1 = ai
+                parameter2 = bi
+                is_int1 = parameter1.isdecimal()
+                is_int2 = parameter2.isdecimal()
+                if is_int1 and is_int2:
+                    a=int(ai)
+                    b=int(bi)
+                    if 0<a and 0<b and a<1000 and b<1000:
                         valid=True
-                else:
+                    else:
                         valid=False
+                else:
+                     valid=False
         else:
                 valid=False
                 
@@ -21,7 +29,6 @@ def calc(A,B):
                 return ans
         else:
                 return -1
-        
                 
 def main ():
 	matchstring = ''
