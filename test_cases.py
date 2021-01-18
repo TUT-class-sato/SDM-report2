@@ -19,9 +19,6 @@ class TestCalc (unittest.TestCase):
         def test_sample4 (self):
                 self.assertEqual (-1, calc(0.1,999))
 
-        def test_sameValue (self):
-                self.assertEqual (998001, calc(999,999))
-
         def test_AisOvertheRange (self):
                 self.assertEqual (-1, calc(1000,1))
 
