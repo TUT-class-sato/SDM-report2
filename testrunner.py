@@ -2,13 +2,14 @@
 
 import unittest
 import sys
+from calc_mul import calc
 
 loader = unittest.TestLoader()
 
 
 #Find the test files in the current directory
 
-tests = loader.discover('.')
+tests = loader.discover ('test_cases')
 
 #Specify the level of information provided by the test runner
 
@@ -20,4 +21,3 @@ results=testRunner.run(tests)
 #print( "results.wasSuccessful: %s" % results.wasSuccessful() )
 if results.wasSuccessful()==False:
     sys.exit(1)
-

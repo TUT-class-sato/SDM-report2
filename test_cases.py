@@ -8,14 +8,34 @@ from calc_mul import calc
 class TestCalc (unittest.TestCase):
 
         def test_sample1 (self):
-                self.assertEqual (21, calc(3,7))
+                self.assertEqual (21, calc(3,7))        #ただしい出力
 
         def test_sample2 (self):
-                self.assertEqual (-1, calc(0,150))
+                self.assertEqual (-1, calc(0,150))      #1未満
 
         def test_sample3 (self):
-                self.assertEqual (-1, calc('a','b'))
+                self.assertEqual (-1, calc('a','b'))    #文字列
 
         def test_sample4 (self):
-                self.assertEqual (-1, calc(0.1,999))
+                self.assertEqual (-1, calc(0.1,999))    #少数
 
+        def test_sample5 (self):
+                self.assertEqual (-1, calc(54,1010))    #1000以上
+
+        def test_sample6 (self):
+                self.assertEqual (21, calc('３','７'))    #全角
+
+        def test_sample7 (self):
+                self.assertEqual (-1, calc("",""))         #エンターキー
+
+        def test_sample8 (self):
+                self.assertEqual (60, calc(10,6))      #B<A
+
+        def test_sample9 (self):
+                self.assertEqual (-1, calc('as',6))      #片方だけ文字列
+
+
+
+
+if __name__ == "__main__":
+    unittest.main()
