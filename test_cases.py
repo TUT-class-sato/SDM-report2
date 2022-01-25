@@ -9,6 +9,8 @@ class TestCalc (unittest.TestCase):
         #有効同値
         def test_enable_int(self):
                 self.assertEqual (999, calc(1,999))
+        def test_enable_int_revers(self):
+                self.assertEqual (9, calc(9,1))
         def test_enable_int_equ(self):
                 self.assertEqual (250000, calc(500,500))
         def test_enable_float(self):
