@@ -18,7 +18,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc("ZZZ", 500))
 
         def test_disable_num_of_char (self):
-                self.assertEqual (-1, calc('1', 500))
+                self.assertEqual (-1, calc('!', 500))
         
         def test_disable_float_min (self):
                 self.assertEqual (-1, calc(1.1, 500))
