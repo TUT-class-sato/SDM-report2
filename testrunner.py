@@ -8,7 +8,7 @@ loader = unittest.TestLoader()
 
 #Find the test files in the current directory
 
-tests = loader.discover('.')
+tests = loader.discover(".")
 
 #Specify the level of information provided by the test runner
 
