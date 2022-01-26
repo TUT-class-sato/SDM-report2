@@ -1,0 +1,60 @@
+======================================================================
+FAIL: test_sample1 (test_cases.TestCalc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\miyak\OneDrive\デスクトップ\Note\21_ソフトウェア設計論\SDM-report2\test_cases.py", line 11, in test_sample1
+    self.assertEqual (21, calc(7,3))
+AssertionError: 21 != -1
+
+======================================================================
+FAIL: test_sample2 (test_cases.TestCalc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\miyak\OneDrive\デスクトップ\Note\21_ソフトウェア設計論\SDM-report2\test_cases.py", line 14, in test_sample2
+    self.assertEqual (-1, calc(0.1,150))
+AssertionError: -1 != 15.0
+
+======================================================================
+FAIL: test_sample3 (test_cases.TestCalc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\miyak\OneDrive\デスクトップ\Note\21_ソフトウェア設計論\SDM-report2\test_cases.py", line 17, in test_sample3
+    self.assertEqual (-1, calc(1,999.9))
+AssertionError: -1 != 999.9
+
+======================================================================
+FAIL: test_sample5 (test_cases.TestCalc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\miyak\OneDrive\デスクトップ\Note\21_ソフトウェア設計論\SDM-report2\test_cases.py", line 23, in test_sample5
+    self.assertEqual (-1, calc(1.1,999))
+AssertionError: -1 != 1098.9
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.009s
+
+FAILED (failures=4, errors=2)
+
+(base) C:\Users\miyak\OneDrive\デスクトップ\Note\21_ソフトウェア設計論\SDM-report2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
