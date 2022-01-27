@@ -22,13 +22,13 @@ class TestCalc (unittest.TestCase):
 	def test_sample5 (self):
 		self.assertEqual (-1, calc(1.1,2.2))
 
-	def test_sample6 (self)
+	def test_sample6 (self):
 		self.assertEqual (-1, calc(150,1000))
 
-	def test_sample7 (self)
+	def test_sample7 (self):
 		self.assertEqual (-1, calc(1,999.1))
 
-	def test_sample8 (self)
+	def test_sample8 (self):
 		self.assertEqual (1, calc(1,1))
 
 	def test_sample9(self):
