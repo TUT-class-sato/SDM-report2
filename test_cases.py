@@ -31,3 +31,4 @@ class TestCalc (unittest.TestCase):
         def test_sample4_2 (self):
                 self.assertEqual (-1, calc(1,998.9))
 
+
