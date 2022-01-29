@@ -43,3 +43,11 @@ class TestCalc (unittest.TestCase):
         #６．どちらも文字である場合
         def test_sample6 (self):
                 self.assertEqual (-1, calc('a','b'))
+
+        #７．どちらかが小数である場合
+        def test_sample7 (self):
+                self.assertEqual (-1, calc(1.1,999))
+        
+        #８．どちらも小数である場合
+        def test_sample8 (self):
+                self.assertEqual (-1, calc(1.1,998.9))

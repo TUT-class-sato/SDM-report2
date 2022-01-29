@@ -9,7 +9,7 @@ def calc(A,B):
         if p.match(ai) and p.match(bi):
                 a=float(ai)
                 b=float(bi)
-                if 1<=a  and b<=999:
+                if 1<=a<=999 and 1<=b<=999 and a.is_integer() and b.is_integer():
                         valid=True
                 else:
                         valid=False
