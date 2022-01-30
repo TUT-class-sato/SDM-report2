@@ -4,7 +4,7 @@ import re
 
 
 def calc(A, B):
-    regobj = re.compile("[0-9]+")
+    regobj = re.compile("^[0-9]+$")
     if regobj.match(str(A)) and regobj.match(str(B)):
         A = int(A)
         B = int(B)
