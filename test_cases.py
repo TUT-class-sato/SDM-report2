@@ -8,14 +8,11 @@ from calc_mul import calc
 class TestCalc (unittest.TestCase):
 
         def test_sample1 (self):
-                self.assertEqual (21, calc(3,7))
+                self.assertEqual (21, calc(7,3))
 
         def test_sample2 (self):
-                self.assertEqual (-1, calc(0,150))
+                self.assertEqual (-1, calc('1st','2nd'))
 
         def test_sample3 (self):
-                self.assertEqual (-1, calc('a','b'))
-
-        def test_sample4 (self):
                 self.assertEqual (-1, calc(0.1,999))
 
