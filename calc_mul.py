@@ -3,13 +3,20 @@
 import re
                 
 def calc(A,B):
+
+        # 与えられた値が文字の時, エラー
+        if type(A) is str or type(B) is str:
+                return -1
+        
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
+        p = re.compile('\d+') # \d : 全ての数字
+        
+        # pの正規表現に完全マッチするとき 
+        if p.fullmatch(ai) and p.fullmatch(bi):
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
+                if 1<=a and a<=999 and 1<=b and b<=999:
                         valid=True
                 else:
                         valid=False
