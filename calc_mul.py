@@ -3,18 +3,21 @@
 import re
                 
 def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
+        if isinstance(A, str) or isinstance(B, str) or isinstance(A, float) or isinstance(B, float):
+                valid=False
+        else:
+                ai=str(A)
+                bi=str(B)
+                p = re.compile('\d+')
+                if p.match(ai) or p.match(bi):
+                        a=int(ai)
+                        b=int(bi)
+                        if a > 0 and a < 1000 and b > 0 and b < 1000:
+                                valid=True
+                        else:
+                                valid=False
                 else:
                         valid=False
-        else:
-                valid=False
                 
         if valid:
                 ans=a*b
