@@ -1,15 +1,8 @@
 #!/usr/bin/python3
-
-import re
                 
 def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
+        if type(A)==int and type(B)==int:
+                if (A>=1 and A<=999) and (B>=1 and B<=999):
                         valid=True
                 else:
                         valid=False
@@ -17,7 +10,7 @@ def calc(A,B):
                 valid=False
                 
         if valid:
-                ans=a*b
+                ans=A*B
                 return ans
         else:
                 return -1
