@@ -5,11 +5,11 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
+        p = re.compile('\d+(\.0+)?')
+        if p.fullmatch(ai) and p.fullmatch(bi):
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
+                if 0<a and a<1000 and 0<b and b<1000:
                         valid=True
                 else:
                         valid=False
@@ -21,8 +21,7 @@ def calc(A,B):
                 return ans
         else:
                 return -1
-        
-                
+                        
 def main ():
 	matchstring = ''
 	while matchstring != 'end':
