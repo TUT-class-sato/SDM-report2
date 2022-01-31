@@ -6,13 +6,18 @@ def calc(A,B):
         ai=str(A)
         bi=str(B)
         p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
-                else:
-                        valid=False
+        if p.match(ai) and p.match(bi):
+                af=float(ai)
+                bf=float(bi)
+		a=int(af)
+		b=int(bf)
+		if float(a) == af and float(b) == bf:
+                	if 1<=a and b<=999:
+                        	valid=True
+                	else:
+                        	valid=False
+		else:
+			valid=False
         else:
                 valid=False
                 
