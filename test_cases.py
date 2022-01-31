@@ -45,7 +45,12 @@ class TestCalc (unittest.TestCase):
 
         def test_sample9 (self):#失敗サンプル b:小数
                 self.assertEqual (-1, calc(999,0.1))
+        
+        def test_sample10 (self):#失敗サンプル a:負の数
+                self.assertEqual (-1, calc(-1,999))
 
-
+        def test_sample11 (self):#失敗サンプル b:負の数
+                self.assertEqual (-1, calc(-1,999))
+        
 
         
