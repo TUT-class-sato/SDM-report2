@@ -36,13 +36,11 @@ class TestCalc (unittest.TestCase):
 
         def test_sample10 (self):
                 self.assertEqual (-1, calc(1000,1))
-
+        
         def test_sample11 (self):
                 self.assertEqual (-1, calc(1,1000))
 
         def test_sample12 (self):
                 self.assertEqual (-1, calc(1000,1000))
-        
-        def test_sample13 (self):
-                self.assertEqual (-1, calc(1,-1))
+
 
