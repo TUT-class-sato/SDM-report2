@@ -53,13 +53,13 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(600,'d'))
 
         def test_sample16 (self):
-                self.assertEqual (-1, calc('10','15'))
+                self.assertEqual (150, calc('10','15'))
 
         def test_sample17 (self):
-                self.assertEqual (-1, calc('10',15))
+                self.assertEqual (150, calc('10',15))
 
         def test_sample18 (self):
-                self.assertEqual (-1, calc(10,'15'))
+                self.assertEqual (150, calc(10,'15'))
 
         def test_sample19 (self):
                 self.assertEqual (-1, calc(None,None))
