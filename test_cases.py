@@ -28,22 +28,22 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual(800, calc(100, 8))
 
         def test_sample08(self):
-                self.assertEqual(-1, calc(9, 0))
+                self.assertEqual(-1, calc(7, 0))
 
         def test_sample09(self):
-                self.assertEqual(15, calc(15, 1))
+                self.assertEqual(150, calc(150, 1))
 
         def test_sample10(self):
-                self.assertEqual(9990, calc(10, 999))
+                self.assertEqual(99900, calc(100, 999))
 
         def test_sample11(self):
-                self.assertEqual(-1, calc(6, 1000))
+                self.assertEqual(-1, calc(8, 1000))
 
         def test_sample12(self):
-                self.assertEqual(-1, calc(120, 0.1))
+                self.assertEqual(-1, calc(1, 0.1))
 
         def test_sample13(self):
-                self.assertEqual(-1, calc(2, "100"))
+                self.assertEqual(-1, calc(3, "100"))
 
         def test_sample14(self):
-                self.assertEqual(700, calc(7, 100))
+                self.assertEqual(800, calc(8, 100))
