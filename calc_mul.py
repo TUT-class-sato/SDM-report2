@@ -3,14 +3,10 @@
 import re
 
 def calc(A, B):
-    valid = False
+    ans = -1
     if isinstance(A, int) and isinstance(B, int):
         if (1 <= A <= 999) and (1 <= B <= 999):
-            valid=True
-
-    ans = -1
-    if valid:
-        ans = A * B
+            ans = A * B
 
     return ans
 
