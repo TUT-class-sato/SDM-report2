@@ -25,6 +25,10 @@ class TestCalc (unittest.TestCase):
 		self.assertEqual (999, calc(1, 999))
 	def test_sample5_2 (self):
 		self.assertEqual (999, calc(999, 1))
+	def test_sample5_3 (self):
+		self.assertEqual (1, calc(1, 1))
+	def test_sample5_4 (self):
+		self.assertEqual (998001, calc(999, 999))
 
 	#範囲外で境界値分析(0も含む)
 	def test_sample6_1 (self):
