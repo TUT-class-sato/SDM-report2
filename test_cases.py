@@ -5,17 +5,29 @@ from calc_mul import calc
 
 # Run with testrunner so needs to be in file test_
 
+
 class TestCalc (unittest.TestCase):
 
-        def test_sample1 (self):
-                self.assertEqual (21, calc(3,7))
+    def expected_value(self):
+        self.assertEqual(21, calc(3, 7))
 
-        def test_sample2 (self):
-                self.assertEqual (-1, calc(0,150))
+    def boundary_value1(self):
+        self.assertEqual(-1, calc(0, 1000))
 
-        def test_sample3 (self):
-                self.assertEqual (-1, calc('a','b'))
+    def boundary_value2(self):
+        self.assertEqual(999, calc(1, 999))
 
-        def test_sample4 (self):
-                self.assertEqual (-1, calc(0.1,999))
+    def outside_value(self):
+        self.assertEqual(-1, calc(-1, 1100))
 
+    def notnum_value(self):
+        self.assertEqual(-1, calc('a', 'b'))
+
+    def decimal_value(self):
+        self.assertEqual(-1, calc(0.1, 999))
+
+    def null_value(self):
+        self.assertEqual(-1, calc(None, 15))
+
+    def zero_value(self):
+        self.assertEqual(-1, calc(0, 15))
