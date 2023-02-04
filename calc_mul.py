@@ -9,10 +9,28 @@ def calc(A,B):
         if p.match(ai) or p.match(bi):
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
+                try:
+                        int(ai)  # 文字列を実際にint関数で変換してみる
+                except ValueError:
+                        a_int_test = False
                 else:
-                        valid=False
+                        a = int(ai)
+                        a_int_test = True
+                try:
+                        int(bi)  # 文字列を実際にint関数で変換してみる
+                except ValueError:
+                        b_int_test = False
+                else:
+                        b = int(bi)
+                        b_int_test = True
+         
+                if a_int_test and b_int_test:
+                        if (0<a and a<1000 and 0<b and b<1000):
+                                valid=True
+                        else:
+                                valid=False
+                else:
+                        valid = False
         else:
                 valid=False
                 

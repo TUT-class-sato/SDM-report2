@@ -7,7 +7,7 @@ from calc_mul import calc
 
 class TestCalc (unittest.TestCase):
         #境界値分割法
-        """def test_sample1 (self):
+        def test_sample1 (self):
                 self.assertEqual (21, calc(3,7))
 
         def test_sample2 (self):
@@ -18,7 +18,7 @@ class TestCalc (unittest.TestCase):
 
         def test_sample4 (self):
                 self.assertEqual (-1, calc(0.1,999))
-        """
+        
         def test_min(self):
                 self.assertEqual(1, calc(1,1))
         def test_max(self):
