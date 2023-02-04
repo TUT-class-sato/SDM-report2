@@ -58,3 +58,4 @@ class TestCalc (unittest.TestCase):
 		self.assertEqual (-1, calc(7,45.4))
         def test_sample23 (self):
 		self.assertEqual (-1, calc(78.9,34.1))
+	#end of test
