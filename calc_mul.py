@@ -6,7 +6,8 @@ def calc(A,B):
         ai=str(A)
         bi=str(B)
         p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
+        #Adopt numbers only
+        if p.match(ai) and p.match(bi):
                 a=float(ai)
                 b=float(bi)
                 #check Both of value [in range] and [integer]
