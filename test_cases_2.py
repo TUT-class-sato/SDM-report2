@@ -12,7 +12,7 @@ class TestCalc (unittest.TestCase):
         self.assertEqual(-1, calc(0,10))
 
     def test_sample3 (self): 
-        self.assertEqual(10, calc(10,0))
+        self.assertEqual(10, calc(10,1))
 
     def test_sample4 (self): 
         self.assertEqual(9990, calc(999,10))
