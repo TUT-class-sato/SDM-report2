@@ -22,7 +22,7 @@ class TestCalc (unittest.TestCase):
         def test_sample6 (self):
                 self.assertEqual (1000, calc(100,10)) # FAIL
         def test_sample7 (self):
-                self.assertEqual (1000, calc(1e2,10)) # FAIL
+                self.assertEqual (9980, calc(998,10)) # FAIL
         def test_sample8 (self):
                 self.assertEqual (9990, calc(999,10)) # FAIL
         def test_sample9 (self):
@@ -58,7 +58,7 @@ class TestCalc (unittest.TestCase):
         def test_sample20 (self):
                 self.assertEqual (-1, calc('a',10)) # ok
         def test_sample21 (self):
-                self.assertEqual (10, calc('1',10)) # ok
+                self.assertEqual (-1, calc('1',10)) # ok
         
 
         # None
