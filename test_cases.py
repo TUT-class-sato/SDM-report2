@@ -79,4 +79,49 @@ class TestCalc (unittest.TestCase):
 
         def test_sample15(self):
                 self.assertEqual(-1, calc('a','b'))
-
+        
+        #Boundary Value Analysis
+        def test_valid_Boundary1(self):
+                self.assertEqual(1, calc(1,1))
+        
+        def test_valid_Boundary2(self):
+                self.assertEqual(500, calc(1,500))
+        
+        def test_valid_Boundary3(self):
+                self.assertEqual(999, calc(1,999))
+        
+        def test_valid_Boundary4(self):
+                self.assertEqual(500, calc(500,1))
+        
+        def test_valid_Boundary5(self):
+                self.assertEqual(999, calc(999,1))
+        
+        def test_valid_Boundary6(self):
+                self.assertEqual(499500, calc(500,999))
+        
+        def test_valid_Boundary7(self):
+                self.assertEqual(499500, calc(999,500))
+        
+        def test_valid_Boundary8(self):
+                self.assertEqual(998001, calc(999,999))
+        
+        def test_invalid_Boundary1(self):
+                self.assertEqual(-1, calc(500,0))
+                
+        def test_invalid_Boundary2(self):
+                self.assertEqual(-1, calc(1000,0))
+        
+        def test_invalid_Boundary3(self):
+                self.assertEqual(-1, calc(0,500))
+        
+        def test_invalid_Boundary4(self):
+                self.assertEqual(-1, calc(0,1000))
+        
+        def test_invalid_Boundary5(self):
+                self.assertEqual(-1, calc(500,1000))
+        
+        def test_invalid_Boundary6(self):
+                self.assertEqual(-1, calc(1000,500))
+        
+        def test_invalid_Boundary7(self):
+                self.assertEqual(-1, calc(1000,1000))
