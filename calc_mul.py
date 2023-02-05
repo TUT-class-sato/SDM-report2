@@ -10,7 +10,7 @@ def calc(A,B):
                 a=float(ai)
                 b=float(bi)
                 #check Both of value [in range] and [integer]
-                if 0<a and b<1000 and a.is_integer() and b.is_integer():
+                if 0<a<1000 and 0<b<1000  and a.is_integer() and b.is_integer():
                         valid=True
                 else:
                         valid=False
