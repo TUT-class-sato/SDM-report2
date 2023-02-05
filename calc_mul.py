@@ -1,15 +1,22 @@
 #!/usr/bin/python3
 
 import re
-                
+             
 def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
+        # ai=str(A)
+        # bi=str(B)
+        checkA = isinstance(A, int)
+        checkB = isinstance(B, int)
+        # p = re.compile('\d+(\.\d+)?') # convert str to regular expression
+        # p = re.compile('[+-]?\d+')
+        # if p.match(ai) or p.match(bi): # check that p match ai, bi
+        if checkA and checkB:
+                # a=float(ai)
+                # b=float(bi)
+                a = A
+                b = B
+                # if 0<a and a<b and b<1000:
+                if 1<=a and a<=999 and 1<=b and b<=999:
                         valid=True
                 else:
                         valid=False
