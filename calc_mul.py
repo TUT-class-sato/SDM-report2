@@ -10,18 +10,10 @@ def calc(A,B):
         else:
                 a=int(ai)
                 b=int(bi)
-                """
-                #not a int
-                if a%1.0!=0.0 or b%1.0!=0.0:
-                        return -1
-                """
-                #out of range
                 if a<1 or a>=1000 or b<1 or b>=1000:
                         return -1
                 else:
                         return a*b
-
-
 def main ():
         matchstring = ''
         while matchstring != 'end':
