@@ -20,13 +20,13 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(0.1,999))
 
         def test_sample5 (self):
-                self.assertEqual (-1, calc(3.4, 7))
+                self.assertEqual (-1, calc(3.4, 7.1)) # test with 2 decimals
 
         def test_sample6 (self):
                 self.assertEqual (15, calc('1', 15))
 
         def test_sample7 (self):
-                self.assertEqual (-1, calc(None, 3))
+                self.assertEqual (-1, calc(None, 3)) # test with None case
 
         def test_sample8 (self):
                 self.assertEqual (99900, calc(100, 999))
