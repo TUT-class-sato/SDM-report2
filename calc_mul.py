@@ -7,8 +7,8 @@ def calc(A,B):
         bi=str(B)
         p = re.compile(r'^\d+$')
         if p.match(ai) and p.match(bi):
-                a=float(ai)
-                b=float(bi)
+                a=int(ai)
+                b=int(bi)
                 if 0< min(a,b) and max(a,b) <1000:
                         valid=True
                 else:
