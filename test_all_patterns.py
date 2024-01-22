@@ -15,25 +15,29 @@ class TestCalc (unittest.TestCase):
     def test_both_valid(self):
         for a in self.valid_int:
             for b in self.valid_int:
-                self.assertEqual(a*b, calc(a, b))
-                self.assertEqual(a*b, calc(b, a))
+                with self.subTest(a=a,b=b):
+                    self.assertEqual(a*b, calc(a, b))
+                    self.assertEqual(a*b, calc(b, a))
 
     def test_one_invalid_int(self):
         for a in self.valid_int:
             for b in self.invalid_int:
-                self.assertEqual(-1, calc(a, b))
-                self.assertEqual(-1, calc(b, a))
+                with self.subTest(a=a, b=b):
+                    self.assertEqual(a*b, calc(a, b))
+                    self.assertEqual(a*b, calc(b, a))
 
     def test_one_invalid_value(self):
         for a in self.valid_int:
             for b in self.invalid_value:
-                self.assertEqual(-1, calc(a, b))
-                self.assertEqual(-1, calc(b, a))
+                with self.subTest(a=a, b=b):
+                    self.assertEqual(a*b, calc(a, b))
+                    self.assertEqual(a*b, calc(b, a))
 
     def test_both_invalid(self):
         target=self.invalid_int
         target.extend(self.invalid_value)
         for a in target:
             for b in target:
-                self.assertEqual(-1, calc(a, b))
-                self.assertEqual(-1, calc(b, a))
+                with self.subTest(a=a, b=b):
+                    self.assertEqual(a*b, calc(a, b))
+                    self.assertEqual(a*b, calc(b, a))
