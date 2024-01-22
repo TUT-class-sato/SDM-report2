@@ -5,7 +5,7 @@ import re
 def calc(A,B):
     ai=str(A)
     bi=str(B)
-    p = re.compile(r'\d+(\.\d+)?')
+    p = re.compile(r'^\d+$')
     if p.match(ai) and p.match(bi):
         a=float(ai)
         b=float(bi)
