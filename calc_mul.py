@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 import re
                 
@@ -25,11 +26,11 @@ def calc(A,B):
         
                 
 def main ():
-    matchstring = ''
-    while matchstring != 'end':
+        matchstring = ''
+        while matchstring != 'end':
                 A = input ('input A: ')
                 B = input ('input B: ')
                 print ('input A * input B = ', calc(A,B))
 
 if __name__ == '__main__':
-    main()
+        main()
