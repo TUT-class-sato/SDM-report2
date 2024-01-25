@@ -3,22 +3,23 @@
 import re
                 
 def calc(A,B):
+        valid=True
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
-                else:
+        p = re.compile('^([1-9][0-9]{0,2})$')
+        if p.fullmatch(ai) and p.fullmatch(bi):
+                a=int(ai)#floatからintに変更
+                b=int(bi)
+                if (not(a > 0 and a < 1000) or not(b > 0 and b < 1000)) : #a>bを受け付けないバグを修正
                         valid=False
+
         else:
                 valid=False
                 
         if valid:
                 ans=a*b
                 return ans
+
         else:
                 return -1
         
