@@ -2,26 +2,27 @@
 
 import re
                 
-def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
-                else:
-                        valid=False
+def calc(A, B):
+    # 文字列に変換
+    ai = str(A)
+    bi = str(B)
+    # 数値のみの文字列かどうかをチェック
+    p = re.compile('[0-9０-９]+')
+    if p.fullmatch(ai) and p.fullmatch(bi):
+        a = int(ai)
+        b = int(bi)
+        # １以上９９９以下の範囲のチェック
+        if (a >= 1 and a <= 999) and (b >= 1 and b <= 999):
+            valid = True
         else:
-                valid=False
-                
-        if valid:
-                ans=a*b
-                return ans
-        else:
-                return -1
-        
+            valid = False
+    else:
+        valid = False
+
+    if valid:
+        return a * b
+    else:
+        return -1        
                 
 def main ():
 	matchstring = ''
