@@ -8,16 +8,16 @@ from calc_mul import calc
 
 class TestCalc (unittest.TestCase):
     def setUp(self):#fixture
-        self.valid_int = [1, 2, 998, 999]
+        self.valid_int = [1, 2, 998, 999,'998']
         self.invalid_int = [-1, 0, 1000, 1001]
-        self.invalid_value = ['a', 'abc','12a','a13', 24.7, 30.0]
+        self.invalid_value = ['a', 'abc','12a','a13', 24.7, 30.0,'']
 
     def test_both_valid(self):
         for a in self.valid_int:
             for b in self.valid_int:
                 with self.subTest(a=a,b=b):
-                    self.assertEqual(a*b, calc(a, b))
-                    self.assertEqual(a*b, calc(b, a))
+                    self.assertEqual(int(a)*int(b), calc(a, b))
+                    self.assertEqual(int(a)*int(b), calc(b, a))
 
     def test_one_invalid_int(self):
         for a in self.valid_int:
