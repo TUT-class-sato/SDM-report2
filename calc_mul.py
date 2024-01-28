@@ -5,11 +5,11 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 1<=a and a<=b and b<=999:
+        p = re.compile(r'^\d+$')
+        if p.match(ai) and p.match(bi):
+                a=int(ai)
+                b=int(bi)
+                if 1<=min(a,b) and b<=max(a,b):
                         valid=True
                 else:
                         valid=False
