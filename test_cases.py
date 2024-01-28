@@ -21,7 +21,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(0.1,999))
 
         def test_sample4 (self):
-                self.assertEqual (-1, calc(３３,３))
+                self.assertEqual (-1, calc("３３","３"))
        """
        def test_sample_add(self):
                 T=[１００,100,１01,１,1,９９９,999,９99]
