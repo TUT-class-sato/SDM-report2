@@ -5,11 +5,11 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
+        p = re.compile(r'^\d+$')
+        if p.match(ai) and p.match(bi):
+                a=int(ai)
+                b=int(bi)
+                if 0< min(a,b) and max(a,b) <1000:
                         valid=True
                 else:
                         valid=False
@@ -24,11 +24,11 @@ def calc(A,B):
         
                 
 def main ():
-	matchstring = ''
-	while matchstring != 'end':
+        matchstring = ''
+        while matchstring != 'end':
                 A = input ('input A: ')
                 B = input ('input B: ')
                 print ('input A * input B = ', calc(A,B))
 
 if __name__ == '__main__':
-	main()
+        main()
