@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import re
-                
 def calc(A,B):
         ai=str(A)
         bi=str(B)
