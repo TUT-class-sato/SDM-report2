@@ -51,4 +51,5 @@ class TestCalc (unittest.TestCase):
 
         def test_sample5_3 (self):
                 self.assertEqual (-1, calc(-10,-1))
+                
 
