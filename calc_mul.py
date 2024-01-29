@@ -3,6 +3,7 @@
 import re
                 
 def calc(A,B):
+        
         if "." in str(A) or "." in str(B):#小数を省く
                 return -1
         if str(A).startswith('0') or str(B).startswith('0'):#0から始まる文字列を省く
@@ -10,13 +11,13 @@ def calc(A,B):
 
         ai=str(A)
         bi=str(B)
-        p = re.compile(r'^[+-]?\d+$')  #数字のみを受け付ける正規表現
+        p = re.compile('^[1-9]\d*$')  #整数のみを受け付ける正規表現
         if p.match(ai) and p.match(bi):#両方数値である
                 
-                a=float(ai)
-                b=float(bi)
+                a=int(ai)
+                b=int(bi)
 
-                if 1<=a<=999 and 1<=b<=999 and(a.is_integer(),b.is_integer()):#両方0~999の範囲に
+                if 1<=a<=999 and 1<=b<=999:#両方1~999の範囲に
                         valid=True
                 else:
                         valid=False
