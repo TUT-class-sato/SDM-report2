@@ -23,68 +23,73 @@ class TestCalc (unittest.TestCase):
         def test_sample5 (self):
                 self.assertEqual (-1, calc("３３","３"))
 
-        def test_sampleTEST(self):
-                y=[1,2,3,4]
-                x=[5,6,7,1]
-                
-                for m in y:
-                        for k in x:
-                                        if self.assertEqual(m*k,calc(m,k)):
-                                                print ('ok')
-"""
         def test_sample_add(self):
                 TH=[100,1,999]
                 FsH=[0,1000,10000,-100,0.5,10^2]
                 FsZ=["１００","-１００","１００００","０","１","９９９","１０００","１０^２","０.５"]
                 Fm =["ｔｓｔ","tst"]
                 ##K*Mが上手く行えない
+
+   
                 for k in TH:
                         for m in TH:
-                                if self.assertEqual(k*m,calc(k,m)):
-                                        print("assert error T->F",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(k*m,calc(k,m),f"assert error T->F{sum}")
                 
                 for k in TH:
                         for m in FsH:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
+                                
+                                        
 
                 for k in TH:
                         for m in FsZ:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
+                                        
 
                 for k in TH:
                         for m in Fm:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
-
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
+                                        
                 for k in FsH:
                         for m in FsH:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
 
                 for k in FsH:
                         for m in FsZ:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
                 
                 for k in FsH:
                         for m in Fm:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
       
                 for k in FsZ:
                         for m in FsZ:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)        
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}") 
 
                 for k in FsZ:
                         for m in Fm:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
 
                 for k in Fm:
                         for m in Fm:
-                                if self.assertEqual(-1,calc(k,m)):
-                                        print("assert error F->T",k,m)
-"""
+                                sum = [k,m]
+                                with self.subTesut(k=k,m=m):
+                                        self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
