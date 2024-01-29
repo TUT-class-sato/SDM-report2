@@ -10,13 +10,13 @@ def calc(A,B):
 
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
+        p = re.compile(r'^[+-]?\d+$')  #数字のみを受け付ける正規表現
         if p.match(ai) and p.match(bi):#両方数値である
                 
                 a=float(ai)
                 b=float(bi)
 
-                if 1<=a<=999 and 1<=b<=999:#両方0~999の範囲に
+                if 1<=a<=999 and 1<=b<=999 and(a.is_integer(),b.is_integer()):#両方0~999の範囲に
                         valid=True
                 else:
                         valid=False
