@@ -31,7 +31,7 @@ class TestCalc (unittest.TestCase):
         def test_sample8 (self):
                 self.assertEqual (-1, calc(100,0))
 
-        def test_sample9 (self)://入力範囲外
+        def test_sample9 (self)://
                 self.assertEqual (-1, calc(1000,100))
 
         def test_sample10 (self):
