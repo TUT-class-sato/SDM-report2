@@ -26,11 +26,10 @@ class TestCalc (unittest.TestCase):
         def test_sampleTEST(self):
                 y=[1,2,3,4]
                 x=[1,2,3,4]
-                z=[1,4,9,16]
+                
                 for m in y:
                         for k in x:
-                                for l in z:
-                                        if self.assertEqual(k*m,l):
+                                        if self.assertEqual(k*m,calc(m,k)):
                                                 print ('ok')
 """
         def test_sample_add(self):
