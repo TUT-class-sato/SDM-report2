@@ -29,7 +29,7 @@ class TestCalc (unittest.TestCase):
                 
                 for m in y:
                         for k in x:
-                                        if self.assertEqual(k*m,calc(m,k)):
+                                        if self.assertEqual(m*k,calc(m,k)):
                                                 print ('ok')
 """
         def test_sample_add(self):
