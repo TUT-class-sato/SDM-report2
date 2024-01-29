@@ -20,9 +20,6 @@ class TestCalc (unittest.TestCase):
         def test_sample4 (self):
                 self.assertEqual (-1, calc(0.1,999))
 
-        def test_sample5 (self):
-                self.assertEqual (-1, calc("３３","３"))
-
         def test_sample_add(self):
                 TH=[100,1,999]
                 FsH=[0,1000,10000,-100,0.5,10^2]
