@@ -50,6 +50,32 @@ class TestCalc (unittest.TestCase):
                                 if self.assertEqual(-1,calc(k,m)):
                                         print("assert error F->T",k,m)
 
-      
-        
+                for k in FsH:
+                        for m in FsH:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)
 
+                for k in FsH:
+                        for m in FsZ:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)
+                
+                for k in FsH:
+                        for m in Fm:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)
+      
+                for k in FsZ:
+                        for m in FsZ:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)        
+
+                for k in FsZ:
+                        for m in Fm:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)
+
+                for k in Fm:
+                        for m in Fm:
+                                if self.assertEqual(-1,calc(k,m)):
+                                        print("assert error F->T",k,m)
