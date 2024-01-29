@@ -25,7 +25,7 @@ class TestCalc (unittest.TestCase):
 
         def test_sampleTEST(self):
                 y=[1,2,3,4]
-                x=[1,2,3,4]
+                x=[5,6,7,1]
                 
                 for m in y:
                         for k in x:
