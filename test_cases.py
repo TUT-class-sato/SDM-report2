@@ -14,7 +14,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (21, calc(7,3))
 
         def test_sample3 (self):#入力範囲ぎりぎり
-                self.assertEqual (1, calc(1,1)
+                self.assertEqual (1, calc(1,1))
 
         def test_sample4 (self):
                 self.assertEqual (998001, calc(999,999))
