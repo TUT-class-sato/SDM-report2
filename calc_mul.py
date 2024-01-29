@@ -5,10 +5,13 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
+        floatp = re.compile('\d+(\.\d+)')
+        intp = re.compile('^\d+$')
+        if floatp.match(ai) or floatp.match(bi):
+                valid = False
+        elif intp.match(ai) and intp.match(bi):
+                a=int(ai)
+                b=int(bi)
                 if 0<a and a<b and b<1000:
                         valid=True
                 else:
