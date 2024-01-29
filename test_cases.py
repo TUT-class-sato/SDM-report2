@@ -23,31 +23,33 @@ class TestCalc (unittest.TestCase):
         def test_sample5 (self):
                 self.assertEqual (-1, calc("３３","３"))
 
-'''
-       def test_sample_add(self):
-                T=[１００,100,１01,１,1,９９９,999,９99]
-                F=[０,0,１０００,1000,１０00,－１００,-100,-１０0,'ｔｓｔ','tst','ｔst',１，０００,'1,000','１,00０','０.５',0.5,'０.5']
+
+        def test_sample_add(self):
+                TH=[100,1,999]
+                FsH=[0,1000,10000,-100,0.5,10^2]
+                FsZ=[１００,-１００,１００００,０,１,９９９,１０００,１０^２,０.５]
+                Fm =["ｔｓｔ","tst"]
                 ##K*Mが上手く行えない
-                for k in T:
-                        for m in T:
-                                if self.assertEqual(unicodedata.normalize('NFKC', k)*unicodedata.normalize('NFKC', m),calc(k,m)):
+                for k in TH:
+                        for m in TH:
+                                if self.assertEqual(k*m,calc(k,m)):
                                         print("assert error T->F",k,m)
                 
-                for k in T:
-                        for m in F:
+                for k in TH:
+                        for m in FsH:
                                 if self.assertEqual(-1,calc(k,m)):
                                         print("assert error F->T",k,m)
 
-                for k in F:
-                        for m in T:
+                for k in TH:
+                        for m in FsZ:
                                 if self.assertEqual(-1,calc(k,m)):
                                         print("assert error F->T",k,m)
 
-                for k in F:
-                        for m in F:
+                for k in TH:
+                        for m in Fm:
                                 if self.assertEqual(-1,calc(k,m)):
                                         print("assert error F->T",k,m)
-'''
+
       
         
 
