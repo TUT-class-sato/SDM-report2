@@ -20,7 +20,7 @@ class TestCalc (unittest.TestCase):
         def test_sample4 (self):
                 self.assertEqual (-1, calc(0.1,999))
 
-"""
+
         def test_sample_add(self):
                 TH=[100,1,999]
                 FsH=[0,1000,10000,-100,0.5,10^2]
@@ -91,5 +91,3 @@ class TestCalc (unittest.TestCase):
                                 sum = [k,m]
                                 with self.subTest(k=k,m=m):
                                         self.assertEqual(-1,calc(k,m),f"assert error F->T{sum}")
-
-"""

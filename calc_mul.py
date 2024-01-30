@@ -6,7 +6,8 @@ def calc(A,B):
         ai=str(A)
         bi=str(B)
         p = re.compile('\d+')##('(\d+)\')
-        if p.match(ai) or p.match(bi):
+        if p.fullmatch(ai) and p.fullmatch(bi):
+                
                 a=float(ai)##(int(ai)でよくね？)
                 b=float(bi)
                 if 0<a and a<1000 and 0<b and B<1000:
