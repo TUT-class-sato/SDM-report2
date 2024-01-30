@@ -7,7 +7,7 @@ def calc(A,B):
         bi=str(B)
         p = re.compile('\d*')##('(\d+)\')
         if p.match(ai) or p.match(bi):
-                a=float(ai)
+                a=float(ai)##(int(ai)でよくね？)
                 b=float(bi)
                 if 0<a and a<1000 and 0<b and B<1000:
                         valid=True
@@ -32,4 +32,4 @@ def main ():
 
 if __name__ == '__main__':
 	main()
-        
+
