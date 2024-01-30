@@ -5,11 +5,11 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('^\d+$')
+        p = re.compile('^\d+$') # 正則表現を修正
         if p.match(ai) and p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a<1000 and 0<b<1000 and a%1==0 and b%1==0:
+                a=int(ai) # 整数以外は入力されないためfloat型からint型に変更
+                b=int(bi)
+                if 0<a<1000 and 0<b<1000:  # 論理演算をorからand二変更、大小比較を削除
                         valid=True
                 else:
                         valid=False
