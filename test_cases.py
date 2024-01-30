@@ -11,7 +11,7 @@ class TestCalc (unittest.TestCase):
         self.assertEqual(1, calc(1,1))  # 正の整数でA=B
 
     def test_valid_input_greater(self):
-        self.assertEqual(1, calc(2,1))  # 正の整数でA>B
+        self.assertEqual(2, calc(2,1))  # 正の整数でA>B
 
     def test_valid_input_less(self):
         self.assertEqual(21, calc(3,7))  # 正の整数でA<B
