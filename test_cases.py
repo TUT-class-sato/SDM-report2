@@ -93,6 +93,13 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc("ab.c","c.de"))
         def test_str_alpha_and_symbol2 (self):
                 self.assertEqual (-1, calc("abc//__",'" or ""="'))
+        # 2.1.5 空文字列
+        def test_str_emptyhalfA (self):
+                self.assertEqual (-1, calc("", 999))
+        def test_str_emptyhalfB (self):
+                self.assertEqual (-1, calc(999, ""))
+        def test_str_emptyboth (self):
+                self.assertEqual (-1, calc("", ""))
 
         # 2.2 範囲に含まれない整数
         # 2.2.1 Aのみ
@@ -115,20 +122,26 @@ class TestCalc (unittest.TestCase):
 
         # 2.3 範囲に含まれない整数の文字列
         # 2.3.1 Aのみ
-        def test_str_Aoutofbounds (self):
+        def test_str_Aoutofbounds1 (self):
                 self.assertEqual (-1, calc("1000", "1"))
         def test_str_Aoutofbounds2 (self):
                 self.assertEqual (-1, calc("9223372036854775807", "1")) # これはsys.maxsize
+        def test_str_Aoutofbounds3 (self):
+                self.assertEqual (-1, calc("0", "1"))
 
         # 2.3.2 Bのみ
         def test_str_Boutofbounds (self):
                 self.assertEqual (-1, calc("1", "1000"))
         def test_str_Boutofbounds2 (self):
                 self.assertEqual (-1, calc("1", "9223372036854775807")) # これはsys.maxsize
+        def test_str_Boutofbounds3 (self):
+                self.assertEqual (-1, calc("1", "0"))
 
         # 2.3.3 AとB
         def test_str_ABoutofbounds (self):
                 self.assertEqual (-1, calc("1000", "1000"))
         def test_str_ABoutofbounds2 (self):
                 self.assertEqual (-1, calc("9223372036854775807", "9223372036854775807")) # これはsys.maxsize
+        def test_str_ABoutofbounds3 (self):
+                self.assertEqual (-1, calc("0", "0"))
 
