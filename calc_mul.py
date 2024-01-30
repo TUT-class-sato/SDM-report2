@@ -7,14 +7,14 @@ def calc(A,B):
         bi=str(B)
         p = re.compile('^\d+$')
         if p.fullmatch(ai) and p.fullmatch(bi):
-                ai.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
-                bi.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
-                if ai == () or bi == ():
+                ak =ai.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                bk =bi.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                if ak == "" or bk == "":
                         valid = False
                 else:
-                        a=float(ai)##(int(ai)でよくね？)
-                        b=float(bi)
-                        if 0<a and a<1000 and 0<b and B<1000:
+                        a=float(ak)##(int(ai)でよくね？)
+                        b=float(bk)
+                        if 0<a and a<1000 and 0<b and b<1000:
                                 valid=True
                         else:
                                 valid=False
