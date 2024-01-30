@@ -7,8 +7,8 @@ def calc(A,B):
         bi=str(B)
         p = re.compile('^\d+$')
         if p.fullmatch(ai) and p.fullmatch(bi):
-                ai.replace("１",'').repalce("２",'').repalce("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
-                bi.replace("１",'').repalce("２",'').repalce("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                ai.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                bi.replace("１",'').replace("２",'').replace("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
                 if ai == () or bi == ():
                         valid = False
                 else:
