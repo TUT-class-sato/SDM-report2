@@ -13,7 +13,14 @@ def calc(A,B):
         if p.match(ai) and p.match(bi):
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
+                
+                # switch values if b is smaller than a
+                if b < a: 
+                        tmp = a
+                        a = b
+                        b = tmp
+
+                if 0<a and a<=b and b<1000:
                         valid=True
                 else:
                         valid=False
