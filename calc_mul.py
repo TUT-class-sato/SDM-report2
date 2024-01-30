@@ -9,7 +9,7 @@ def calc(A,B):
         # make sure to allow 0 prefixes, nvm is already allowed
         ai= ai.strip()
         bi = bi.strip()
-        p = re.compile(r'^[+-]?\d+$')
+        p = re.compile(r'^\d+$')
 
         if p.match(ai) and p.match(bi):
                 a=float(ai)
