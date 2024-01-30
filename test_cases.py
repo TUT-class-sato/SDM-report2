@@ -62,55 +62,55 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(1,0))
         def test_sample22 (self):
                 self.assertEqual (-1, calc(0,1))
-        def test_sample24 (self):
+        def test_sample23 (self):
                 self.assertEqual (-1, calc(0,0))
-        def test_sample25 (self):
+        def test_sample24 (self):
                 self.assertEqual (-1, calc(1000,0))
-        def test_sample26 (self):
+        def test_sample25 (self):
                 self.assertEqual (-1, calc(0,1000))
-        def test_sample27 (self):
+        def test_sample26 (self):
                 self.assertEqual (-1, calc(1,1000))
-        def test_sample28 (self):
+        def test_sample27 (self):
                 self.assertEqual (-1, calc(1000,1))
-        def test_sample29 (self):
+        def test_sample28 (self):
                 self.assertEqual (-1, calc(999,1000))
-        def test_sample30 (self):
+        def test_sample29 (self):
                 self.assertEqual (-1, calc(1000,999))
-        def test_sample31 (self):
+        def test_sample30 (self):
                 self.assertEqual (-1, calc(1000,1000))
-        def test_sample32 (self):
+        def test_sample31 (self):
                 self.assertEqual (-1, calc(0,-1))
-        def test_sample33 (self):
+        def test_sample32 (self):
                 self.assertEqual (-1, calc(-1,0))
-        def test_sample34 (self):
+        def test_sample33 (self):
                 self.assertEqual (-1, calc(-1,-1))
-        def test_sample35 (self):
+        def test_sample34 (self):
                 self.assertEqual (-1, calc(-1,1))
-        def test_sample36 (self):
+        def test_sample35 (self):
                 self.assertEqual (-1, calc(1,-1))
-        def test_sample37 (self):
+        def test_sample36 (self):
                 self.assertEqual (-1, calc(-1,999))
-        def test_sample38 (self):
+        def test_sample37 (self):
                 self.assertEqual (-1, calc(999,-1))
-        def test_sample39 (self):
+        def test_sample38 (self):
                 self.assertEqual (-1, calc(1000,-1))
-        def test_sample40 (self):
+        def test_sample39 (self):
                 self.assertEqual (-1, calc(-1,1000))
 
         #その他
-        def test_sample41 (self):
+        def test_sample40 (self):
                 self.assertEqual (-1, calc('a',1))
-        def test_sample42 (self):
+        def test_sample41 (self):
                 self.assertEqual (-1, calc(1,'b'))
-        def test_sample43 (self):
+        def test_sample42 (self):
                 self.assertEqual (-1, calc(1,'1b'))
-        def test_sample44 (self):
+        def test_sample43 (self):
                 self.assertEqual (-1, calc('1a',1))
-        def test_sample45 (self):
+        def test_sample44 (self):
                 self.assertEqual (-1, calc('1a','1b'))
                 
         #入力数変更
-        #def test_sample46 (self):
+        #def test_sample45 (self):
                 #self.assertEqual (-1, calc(1,2,3))
-        #def test_sample47 (self):
+        #def test_sample46 (self):
                 #self.assertEqual (-1, calc(3))
