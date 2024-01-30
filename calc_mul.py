@@ -7,22 +7,26 @@ def calc(A,B):
         bi=str(B)
         p = re.compile('^\d+$')
         if p.fullmatch(ai) and p.fullmatch(bi):
-                
-                a=float(ai)##(int(ai)でよくね？)
-                b=float(bi)
-                if 0<a and a<1000 and 0<b and B<1000:
-                        valid=True
+                ai.replace("１",'').repalce("２",'').repalce("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                bi.replace("１",'').repalce("２",'').repalce("３",'').replace("４",'').replace("５",'').replace("６",'').replace("７",'').replace("８",'').replace("９",'').replace("０",'')
+                if ai == () or bi == ():
+                        valid = False
                 else:
-                        valid=False
+                        a=float(ai)##(int(ai)でよくね？)
+                        b=float(bi)
+                        if 0<a and a<1000 and 0<b and B<1000:
+                                valid=True
+                        else:
+                                valid=False
         else:
                 valid=False
-                
+                        
         if valid:
                 ans=a*b
                 return ans
         else:
                 return -1
-        
+                
                 
 def main ():
 	matchstring = ''
