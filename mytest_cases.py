@@ -1,4 +1,5 @@
 import unittest
+from calc_mul import calc
 
 class TestCalcFunction(unittest.TestCase):
     def test_valid_inputs(self):
