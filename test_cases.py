@@ -52,8 +52,8 @@ class TestCalc (unittest.TestCase):
         self.assertEqual(calc("abc", "xyz"), -1)  # AとBが数値でない場合
     def test_19(self):        
         self.assertEqual(calc("1b1", 1), -1)  # Aが数と文字を含む場合
-    def test_21(self):        
+    def test_20(self):        
         self.assertEqual(calc(1, "1y1"), -1)  # Bが数と文字を含む場合
-    def test_22(self):        
+    def test_21(self):        
         self.assertEqual(calc("1b1", "1y1"), -1)  # AとBが数と文字を含む場合
 
