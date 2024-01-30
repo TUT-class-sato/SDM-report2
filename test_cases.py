@@ -31,32 +31,27 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(999.0,1.0))
         def test_sample9 (self):
                 self.assertEqual (-1, calc(1.0,20))
-        def test_sample9 (self):
-                self.assertEqual (-1, calc(20,1.0))
-        def test_sample9 (self):
-                self.assertEqual (-1, calc(20,0.1))
         def test_sample10 (self):
-                self.assertEqual (-1, calc(0.1,20))
+                self.assertEqual (-1, calc(20,1.0))
         def test_sample11 (self):
-                self.assertEqual (-1, calc(1.1,999))
+                self.assertEqual (-1, calc(20,0.1))
         def test_sample12 (self):
+                self.assertEqual (-1, calc(0.1,20))
+        def test_sample13 (self):
+                self.assertEqual (-1, calc(1.1,999))
+        def test_sample14 (self):
                 self.assertEqual (-1, calc(999,1.1))
 
         #最大値最小値
-        def test_sample13 (self):
-                self.assertEqual (998001, calc(999,999))
-        def test_sample14 (self):
-                self.assertEqual (1, calc(1,1))
         def test_sample15 (self):
-                self.assertEqual (999, calc(1,999))
+                self.assertEqual (998001, calc(999,999))
         def test_sample16 (self):
+                self.assertEqual (1, calc(1,1))
+        def test_sample17 (self):
+                self.assertEqual (999, calc(1,999))
+        def test_sample18 (self):
                 self.assertEqual (999, calc(999,1))
         
-        #入力数変更
-        #def test_sample17 (self):
-                #self.assertEqual (-1, calc(1,2,3))
-        #def test_sample18 (self):
-                #self.assertEqual (-1, calc(3))
 
         #境界値（無効）入力
         def test_sample19 (self):
@@ -114,4 +109,8 @@ class TestCalc (unittest.TestCase):
         def test_sample45 (self):
                 self.assertEqual (-1, calc('1a','1b'))
                 
-
+        #入力数変更
+        #def test_sample46 (self):
+                #self.assertEqual (-1, calc(1,2,3))
+        #def test_sample47 (self):
+                #self.assertEqual (-1, calc(3))
