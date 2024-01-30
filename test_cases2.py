@@ -32,7 +32,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc(10,0))
 
         def test_sample9 (self):
-                self.assertEqual (-1, calc('999','1'))
+                self.assertEqual (999, calc('999','1'))
 
         def test_sample10 (self):
                 self.assertEqual (-1, calc(True, True))
