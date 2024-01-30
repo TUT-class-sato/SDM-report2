@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import unittest
-import sys
 from calc_mul import calc
 
 # Run with testrunner so needs to be in file test_
@@ -38,11 +37,11 @@ class TestCalc (unittest.TestCase):
 
         #test for overflow and underflow
         def test_sample12 (self):
-                self.assertEqual (-1, calc(sys.float_info.min - 1,1))
+                self.assertEqual (-1, calc(2.2250738585072014e-308 - 1,1))
         def test_sample13 (self):
-                self.assertEqual (-1, calc(1,sys.float_info.max + 1))
+                self.assertEqual (-1, calc(1,1.7976931348623157e+308 + 1))
         def test_sample14 (self):
-                self.assertEqual (-1, calc(sys.float_info.min - 1,sys.float_info.max + 1))
+                self.assertEqual (-1, calc(2.2250738585072014e-308 - 1,1.7976931348623157e+308 + 1))
         
         #test for non-integer input (入力は正数でないもの)
         def test_sample15 (self):
