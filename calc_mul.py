@@ -5,11 +5,14 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
+        #p = re.compile('\d+(\.\d+)?') #original
+        p = re.compile('\d+')
+        #if p.match(ai) or p.match(bi): #original
+        if p.match(ai) and p.match(bi) and '.' not in ai and '.' not in bi: 
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
+                if 1<=a and 1<=b and a<=999 and b<=999: #revised
+                #if 0<a and a<b and b<1000: #original
                         valid=True
                 else:
                         valid=False
@@ -18,6 +21,7 @@ def calc(A,B):
                 
         if valid:
                 ans=a*b
+                print("ans: ", ans)
                 return ans
         else:
                 return -1
