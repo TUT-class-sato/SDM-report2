@@ -5,10 +5,10 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        # run strip before checking ( to remove trailing spaces)
-        # make sure to allow 0 prefixes, nvm is already allowed
+
         ai= ai.strip()
         bi = bi.strip()
+
         p = re.compile(r'^\d+$')
 
         if p.match(ai) and p.match(bi):
