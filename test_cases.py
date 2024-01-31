@@ -1,4 +1,4 @@
-99#!/usr/bin/python3
+#!/usr/bin/python3
 
 import unittest
 from calc_mul import calc
@@ -17,7 +17,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (-1, calc('a','b'))
 
         def test_sample4 (self):
-                self.assertEqual (-1, calc(1.5,999))
+                self.assertEqual (-1, calc(0.5,999))
 
 
 
