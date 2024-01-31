@@ -5,11 +5,14 @@ import re
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
+	#入力された文字列が整数のみであることを確認
+        p = re.compile('\d+$')
+	#ai,biがどちらも整数であることの確認
+        if p.match(ai) and p.match(bi):
                 a=float(ai)
                 b=float(bi)
-                if 0<a and a<b and b<1000:
+	#a, bの範囲を1～999にする
+                if (0<a and a<1000)and(0<b and b<1000):
                         valid=True
                 else:
                         valid=False
