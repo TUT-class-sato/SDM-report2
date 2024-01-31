@@ -40,7 +40,7 @@ class TestCalc (unittest.TestCase):
                 self.assertEqual (1, calc(1,1))
 
         def test_sample11 (self):
-                self.assertEqual (998001, calc(999,999))SS
+                self.assertEqual (998001, calc(999,999))
 
         def test_sample12 (self):
                 self.assertEqual (-1, calc(0,1000))
