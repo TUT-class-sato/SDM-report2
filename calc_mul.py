@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 
 import re
-                
+
+
 def calc(A,B):
         ai=str(A)
         bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
+        p = re.compile('^\d+$')
+        if p.match(ai) and p.match(bi):
+                a=int(ai)
+                b=int(bi)
+                if (1<=a and a<=999) and (1<=b and b<=999):
                         valid=True
                 else:
                         valid=False
@@ -31,4 +32,5 @@ def main ():
                 print ('input A * input B = ', calc(A,B))
 
 if __name__ == '__main__':
+	main()
 	main()
