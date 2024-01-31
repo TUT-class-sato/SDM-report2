@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 def calc(A,B):
-    if type(A) is int and type(B) is int and 0<a and b<1000:
-        ans=a*b
-        return ans
+    if type(A) is int and type(B) is int and 0<A and B<1000:
+        return A*B
     else:
         return -1
         
