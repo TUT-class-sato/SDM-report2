@@ -35,3 +35,8 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(-1, calc("z28", 500))  # A is a string and number
         self.assertEqual(-1, calc(500, "z28"))  # B is a string and number
         self.assertEqual(-1, calc("z28", "z28"))  # A, B is a string and number
+
+    def test_invalid_inputs_none(self):
+        self.assertEqual(-1, calc(None, 500))  # A is None
+        self.assertEqual(-1, calc(500, None))  # B is None
+        self.assertEqual(-1, calc(None, None))  # A, B is None
