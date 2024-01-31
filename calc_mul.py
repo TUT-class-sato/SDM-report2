@@ -3,6 +3,7 @@
 import re
 
 
+#計算
 def calc(A, B):
     # 入力が有効であるかを判定
     if isValidInteger(str(A)) and isValidInteger(str(B)):
