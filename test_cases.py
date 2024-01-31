@@ -23,9 +23,12 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(-1, calc(1000, 1000))  # A, B above the upper boundary
 
     def test_invalid_inputs_floating_number(self):
-        self.assertEqual(-1, calc(5.5, 500))  # A is floating number
-        self.assertEqual(-1, calc(500, 5.5))  # B is floating number
-        self.assertEqual(-1, calc(5.5, 5.5))  # A, B is floating number
+        self.assertEqual(-1, calc(1.01, 500))  # A is floating number
+        self.assertEqual(-1, calc(1.99, 500))  # A is floating number
+        self.assertEqual(-1, calc(500, 1.01))  # B is floating number
+        self.assertEqual(-1, calc(500, 1.99))  # B is floating number
+        self.assertEqual(-1, calc(1.01, 1.01))  # A, B is floating number
+        self.assertEqual(-1, calc(1.99, 1.99))  # A, B is floating number
 
     def test_invalid_inputs_string_values(self):
         self.assertEqual(-1, calc("xyz", 500))  # A is a string
