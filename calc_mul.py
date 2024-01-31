@@ -3,18 +3,24 @@
 import re
                 
 def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
+        if not((isinstance(A, str) or isinstance(A, int)) \
+               and (isinstance(B, str) or isinstance(B, int))):
+                valid = False
+        elif isinstance(A, str) and A.isalpha() or isinstance(B, str) and B.isalpha(): # 'a'などの16進数は除外
+                valid=False
+        else:
+                ai=str(A)
+                bi=str(B)
+                p = re.compile('(^\d+$)|(\d+[eE]\d+)') # 整数、指数表記の整数のマッチ
+                if p.match(ai) and p.match(bi): # or -> and
+                        a=int(float(ai)) # float()は指数表記を数値に変換可能
+                        b=int(float(bi))
+                        if 0<min(a,b) and max(a,b)<1000:
+                                valid=True
+                        else:
+                                valid=False
                 else:
                         valid=False
-        else:
-                valid=False
                 
         if valid:
                 ans=a*b
