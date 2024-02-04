@@ -3,19 +3,19 @@
 import re
                 
 def calc(A,B):
-        ai=str(A)
-        bi=str(B)
-        p = re.compile('\d+(\.\d+)?')
-        if p.match(ai) or p.match(bi):
-                a=float(ai)
-                b=float(bi)
-                if 0<a and a<b and b<1000:
-                        valid=True
+        if (type(A) == int or type(A) == float) and (type(B) == int or type(B) == float):
+                if (A - int(A) == 0 and B - int(B) == 0):
+                        a = int(A)
+                        b = int(B)
+                        if 0<a and a<1000 and 0<b and b<1000:
+                                valid=True
+                        else:
+                                valid=False
                 else:
                         valid=False
         else:
                 valid=False
-                
+        
         if valid:
                 ans=a*b
                 return ans
