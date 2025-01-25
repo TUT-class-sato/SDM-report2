@@ -12,7 +12,7 @@ def calc(A,B):
 		a = int(ai)
 		b = int(bi)
 		# 整数範囲の確認
-		if (a > 0 and a < 1000) and (b > 0 and b < 1000):
+		if (a >= 1 and a <= 999) and (b >= 1 and b <= 999):
 			valid = True
 		else:
 			valid = False
