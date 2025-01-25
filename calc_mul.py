@@ -7,7 +7,7 @@ def calc(A,B):
 	ai=str(A)
 	bi=str(B)
 	# 整数データか確認
-	p = re.compile('[0-9]+')
+	p = re.compile('[+-]?[0-9]+')
 	if p.fullmatch(ai) and p.fullmatch(bi):
 		a = int(ai)
 		b = int(bi)
