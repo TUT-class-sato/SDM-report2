@@ -100,3 +100,10 @@ class TestCalc (unittest.TestCase):
         def test_additional27(self):
             self.assertEqual(-1, calc('a1', 'a1'))
 
+        def test_additional28(self):
+             self.assertEqual(100, calc('+10', '+10'))
+
+        def test_additional29(self):
+             self.assertEqual(-1, calc('+10', '-10'))
+
+
