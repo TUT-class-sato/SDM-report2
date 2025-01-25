@@ -1,4 +1,3 @@
-OK
 test_additional01 (test_cases.TestCalc.test_additional01) ... ok
 test_additional02 (test_cases.TestCalc.test_additional02) ... ok
 test_additional03 (test_cases.TestCalc.test_additional03) ... ok
@@ -26,10 +25,12 @@ test_additional24 (test_cases.TestCalc.test_additional24) ... ok
 test_additional25 (test_cases.TestCalc.test_additional25) ... ok
 test_additional26 (test_cases.TestCalc.test_additional26) ... ok
 test_additional27 (test_cases.TestCalc.test_additional27) ... ok
+test_additional28 (test_cases.TestCalc.test_additional28) ... ok
+test_additional29 (test_cases.TestCalc.test_additional29) ... ok
 test_sample1 (test_cases.TestCalc.test_sample1) ... ok
 test_sample2 (test_cases.TestCalc.test_sample2) ... ok
 test_sample3 (test_cases.TestCalc.test_sample3) ... ok
 test_sample4 (test_cases.TestCalc.test_sample4) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 0.007s
+Ran 33 tests in 0.006s

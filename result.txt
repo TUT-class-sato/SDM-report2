@@ -1,4 +1,4 @@
-FAILED (failures=5, errors=7)
+FAILED (failures=7, errors=7)
 test_additional01 (test_cases.TestCalc.test_additional01) ... ok
 test_additional02 (test_cases.TestCalc.test_additional02) ... FAIL
 test_additional03 (test_cases.TestCalc.test_additional03) ... FAIL
@@ -16,7 +16,7 @@ test_additional14 (test_cases.TestCalc.test_additional14) ... FAIL
 test_additional15 (test_cases.TestCalc.test_additional15) ... ok
 test_additional16 (test_cases.TestCalc.test_additional16) ... ok
 test_additional17 (test_cases.TestCalc.test_additional17) ... ok
-test_additional18 (test_cases.TestCalc.test_additional18) ... ok
+test_additional18 (test_cases.TestCalc.test_additional18) ... FAIL
 test_additional19 (test_cases.TestCalc.test_additional19) ... ERROR
 test_additional20 (test_cases.TestCalc.test_additional20) ... ERROR
 test_additional21 (test_cases.TestCalc.test_additional21) ... ok
@@ -26,6 +26,8 @@ test_additional24 (test_cases.TestCalc.test_additional24) ... ERROR
 test_additional25 (test_cases.TestCalc.test_additional25) ... ERROR
 test_additional26 (test_cases.TestCalc.test_additional26) ... ERROR
 test_additional27 (test_cases.TestCalc.test_additional27) ... ok
+test_additional28 (test_cases.TestCalc.test_additional28) ... FAIL
+test_additional29 (test_cases.TestCalc.test_additional29) ... ok
 test_sample1 (test_cases.TestCalc.test_sample1) ... ok
 test_sample2 (test_cases.TestCalc.test_sample2) ... ok
 test_sample3 (test_cases.TestCalc.test_sample3) ... ok
@@ -164,6 +166,22 @@ Traceback (most recent call last):
 AssertionError: -1 != 1.0
 
 ======================================================================
+FAIL: test_additional18 (test_cases.TestCalc.test_additional18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 74, in test_additional18
+    self.assertEqual(-1, calc('２', '６'))
+AssertionError: -1 != 12.0
+
+======================================================================
+FAIL: test_additional28 (test_cases.TestCalc.test_additional28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 104, in test_additional28
+    self.assertEqual(100, calc('+10', '+10'))
+AssertionError: 100 != -1
+
+======================================================================
 FAIL: test_sample4 (test_cases.TestCalc.test_sample4)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -172,4 +190,6 @@ Traceback (most recent call last):
 AssertionError: -1 != 99.9
 
 ----------------------------------------------------------------------
-Ran 32 tests in 0.008s
+Ran 34 tests in 0.009s
+
+FAILED (failures=7, errors=8)
