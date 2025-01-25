@@ -71,7 +71,7 @@ class TestCalc (unittest.TestCase):
             self.assertEqual(12, calc('2', '6'))
 
         def test_additional18(self):
-            self.assertEqual(12, calc('２', '６'))
+            self.assertEqual(-1, calc('２', '６'))
 
         def test_additional19(self):
             self.assertEqual(-1, calc('a', 10))
