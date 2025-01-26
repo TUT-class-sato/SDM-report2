@@ -5,24 +5,40 @@ from calc_mul import calc
 
 class TestCalc(unittest.TestCase):
 
-    # 通常の計算テスト
+    # 同値分割法: 有効な値の場合
     def test_valid_cases(self):
-        self.assertEqual(21, calc(3, 7))      # 正常な整数の掛け算
-        self.assertEqual(1000, calc(20, 50))  # 正常な整数の掛け算
+        # 最小の有効値
+        self.assertEqual(calc(1, 1), 1)         
+        # 最大の有効値
+        self.assertEqual(calc(999, 999), 998001)
+        # 中間の有効値
+        self.assertEqual(calc(10, 20), 200)    
 
-    # 境界値テスト
+    # 境界値分析: 境界値と境界外の値
     def test_boundary_cases(self):
-        self.assertEqual(-1, calc(0, 150))    # Aが無効な場合
-        self.assertEqual(-1, calc(1000, 150)) # Aが無効な場合
-        self.assertEqual(-1, calc(150, 0))    # Bが無効な場合
-        self.assertEqual(-1, calc(150, 1000)) # Bが無効な場合
+        # 境界値
+        self.assertEqual(calc(1, 999), 999)    # 境界値
+        self.assertEqual(calc(999, 1), 999)    # 境界値
+        # 境界外（下限）
+        self.assertEqual(calc(0, 999), -1)     
+        # 境界外（上限）
+        self.assertEqual(calc(1, 1000), -1)    
 
-    # 入力が数値以外の場合
-    def test_invalid_input(self):
-        self.assertEqual(-1, calc('a', 'b'))  # 文字列が入力された場合
-        self.assertEqual(-1, calc(0.1, 999))  # 浮動小数点数が入力された場合
-
-    # 入力が数値であるが条件に合わない場合
+    # 同値分割法: 範囲外の値
     def test_out_of_range(self):
-        self.assertEqual(-1, calc(-10, 100))   # 負の数が入力された場合
-        self.assertEqual(-1, calc(500, 1000))  # 最大値を超えた場合
+        # 負の数
+        self.assertEqual(calc(-1, 500), -1)    
+        # 上限超え
+        self.assertEqual(calc(500, 1000), -1)  
+
+    # エラーハンドリング: 無効な入力（浮動小数点、文字列）
+    def test_invalid_inputs(self):
+        # 浮動小数点数
+        self.assertEqual(calc(0.5, 500), -1)   
+        # 文字列
+        self.assertEqual(calc(500, "abc"), -1) 
+        # 両方文字列
+        self.assertEqual(calc("xyz", "abc"), -1)
+        # 数値文字列
+        self.assertEqual(calc("100", 500), -1) 
+
