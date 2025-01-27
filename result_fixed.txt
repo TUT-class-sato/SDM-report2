@@ -1,0 +1,36 @@
+test_additional01 (test_cases.TestCalc.test_additional01) ... ok
+test_additional02 (test_cases.TestCalc.test_additional02) ... ok
+test_additional03 (test_cases.TestCalc.test_additional03) ... ok
+test_additional04 (test_cases.TestCalc.test_additional04) ... ok
+test_additional05 (test_cases.TestCalc.test_additional05) ... ok
+test_additional06 (test_cases.TestCalc.test_additional06) ... ok
+test_additional07 (test_cases.TestCalc.test_additional07) ... ok
+test_additional08 (test_cases.TestCalc.test_additional08) ... ok
+test_additional09 (test_cases.TestCalc.test_additional09) ... ok
+test_additional10 (test_cases.TestCalc.test_additional10) ... ok
+test_additional11 (test_cases.TestCalc.test_additional11) ... ok
+test_additional12 (test_cases.TestCalc.test_additional12) ... ok
+test_additional13 (test_cases.TestCalc.test_additional13) ... ok
+test_additional14 (test_cases.TestCalc.test_additional14) ... ok
+test_additional15 (test_cases.TestCalc.test_additional15) ... ok
+test_additional16 (test_cases.TestCalc.test_additional16) ... ok
+test_additional17 (test_cases.TestCalc.test_additional17) ... ok
+test_additional18 (test_cases.TestCalc.test_additional18) ... ok
+test_additional19 (test_cases.TestCalc.test_additional19) ... ok
+test_additional20 (test_cases.TestCalc.test_additional20) ... ok
+test_additional21 (test_cases.TestCalc.test_additional21) ... ok
+test_additional22 (test_cases.TestCalc.test_additional22) ... ok
+test_additional23 (test_cases.TestCalc.test_additional23) ... ok
+test_additional24 (test_cases.TestCalc.test_additional24) ... ok
+test_additional25 (test_cases.TestCalc.test_additional25) ... ok
+test_additional26 (test_cases.TestCalc.test_additional26) ... ok
+test_additional27 (test_cases.TestCalc.test_additional27) ... ok
+test_additional28 (test_cases.TestCalc.test_additional28) ... ok
+test_additional29 (test_cases.TestCalc.test_additional29) ... ok
+test_sample1 (test_cases.TestCalc.test_sample1) ... ok
+test_sample2 (test_cases.TestCalc.test_sample2) ... ok
+test_sample3 (test_cases.TestCalc.test_sample3) ... ok
+test_sample4 (test_cases.TestCalc.test_sample4) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.006s

@@ -1,0 +1,195 @@
+FAILED (failures=7, errors=7)
+test_additional01 (test_cases.TestCalc.test_additional01) ... ok
+test_additional02 (test_cases.TestCalc.test_additional02) ... FAIL
+test_additional03 (test_cases.TestCalc.test_additional03) ... FAIL
+test_additional04 (test_cases.TestCalc.test_additional04) ... ok
+test_additional05 (test_cases.TestCalc.test_additional05) ... FAIL
+test_additional06 (test_cases.TestCalc.test_additional06) ... ok
+test_additional07 (test_cases.TestCalc.test_additional07) ... ok
+test_additional08 (test_cases.TestCalc.test_additional08) ... ok
+test_additional09 (test_cases.TestCalc.test_additional09) ... ok
+test_additional10 (test_cases.TestCalc.test_additional10) ... ok
+test_additional11 (test_cases.TestCalc.test_additional11) ... ok
+test_additional12 (test_cases.TestCalc.test_additional12) ... ok
+test_additional13 (test_cases.TestCalc.test_additional13) ... ok
+test_additional14 (test_cases.TestCalc.test_additional14) ... FAIL
+test_additional15 (test_cases.TestCalc.test_additional15) ... ok
+test_additional16 (test_cases.TestCalc.test_additional16) ... ok
+test_additional17 (test_cases.TestCalc.test_additional17) ... ok
+test_additional18 (test_cases.TestCalc.test_additional18) ... FAIL
+test_additional19 (test_cases.TestCalc.test_additional19) ... ERROR
+test_additional20 (test_cases.TestCalc.test_additional20) ... ERROR
+test_additional21 (test_cases.TestCalc.test_additional21) ... ok
+test_additional22 (test_cases.TestCalc.test_additional22) ... ERROR
+test_additional23 (test_cases.TestCalc.test_additional23) ... ERROR
+test_additional24 (test_cases.TestCalc.test_additional24) ... ERROR
+test_additional25 (test_cases.TestCalc.test_additional25) ... ERROR
+test_additional26 (test_cases.TestCalc.test_additional26) ... ERROR
+test_additional27 (test_cases.TestCalc.test_additional27) ... ok
+test_additional28 (test_cases.TestCalc.test_additional28) ... FAIL
+test_additional29 (test_cases.TestCalc.test_additional29) ... ok
+test_sample1 (test_cases.TestCalc.test_sample1) ... ok
+test_sample2 (test_cases.TestCalc.test_sample2) ... ok
+test_sample3 (test_cases.TestCalc.test_sample3) ... ok
+test_sample4 (test_cases.TestCalc.test_sample4) ... FAIL
+testrunner (unittest.loader._FailedTest.testrunner) ... ERROR
+
+======================================================================
+ERROR: test_additional19 (test_cases.TestCalc.test_additional19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 77, in test_additional19
+    self.assertEqual(-1, calc('a', 10))
+                         ^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 10, in calc
+    a=float(ai)
+      ^^^^^^^^^
+ValueError: could not convert string to float: 'a'
+
+======================================================================
+ERROR: test_additional20 (test_cases.TestCalc.test_additional20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 80, in test_additional20
+    self.assertEqual(-1, calc(10, 'a'))
+                         ^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 11, in calc
+    b=float(bi)
+      ^^^^^^^^^
+ValueError: could not convert string to float: 'a'
+
+======================================================================
+ERROR: test_additional22 (test_cases.TestCalc.test_additional22)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 86, in test_additional22
+    self.assertEqual(-1, calc('1a', 10))
+                         ^^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 10, in calc
+    a=float(ai)
+      ^^^^^^^^^
+ValueError: could not convert string to float: '1a'
+
+======================================================================
+ERROR: test_additional23 (test_cases.TestCalc.test_additional23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 89, in test_additional23
+    self.assertEqual(-1, calc(10, '1a'))
+                         ^^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 11, in calc
+    b=float(bi)
+      ^^^^^^^^^
+ValueError: could not convert string to float: '1a'
+
+======================================================================
+ERROR: test_additional24 (test_cases.TestCalc.test_additional24)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 92, in test_additional24
+    self.assertEqual(-1, calc('1a', '1a'))
+                         ^^^^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 10, in calc
+    a=float(ai)
+      ^^^^^^^^^
+ValueError: could not convert string to float: '1a'
+
+======================================================================
+ERROR: test_additional25 (test_cases.TestCalc.test_additional25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 95, in test_additional25
+    self.assertEqual(-1, calc('a1', 10))
+                         ^^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 10, in calc
+    a=float(ai)
+      ^^^^^^^^^
+ValueError: could not convert string to float: 'a1'
+
+======================================================================
+ERROR: test_additional26 (test_cases.TestCalc.test_additional26)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 98, in test_additional26
+    self.assertEqual(-1, calc(10, 'a1'))
+                         ^^^^^^^^^^^^^^
+  File "C:xxx\SDM-report2\calc_mul.py", line 11, in calc
+    b=float(bi)
+      ^^^^^^^^^
+ValueError: could not convert string to float: 'a1'
+
+======================================================================
+ERROR: testrunner (unittest.loader._FailedTest.testrunner)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: testrunner
+Traceback (most recent call last):
+  File "C:\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:xxx\SDM-report2\testrunner.py", line 22, in <module>
+    sys.exit(1)
+SystemExit: 1
+
+
+======================================================================
+FAIL: test_additional02 (test_cases.TestCalc.test_additional02)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 26, in test_additional02
+    self.assertEqual(1, calc(1, 1))
+AssertionError: 1 != -1
+
+======================================================================
+FAIL: test_additional03 (test_cases.TestCalc.test_additional03)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 29, in test_additional03
+    self.assertEqual(999, calc(999, 1))
+AssertionError: 999 != -1
+
+======================================================================
+FAIL: test_additional05 (test_cases.TestCalc.test_additional05)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 35, in test_additional05
+    self.assertEqual(998001, calc(999, 999))
+AssertionError: 998001 != -1
+
+======================================================================
+FAIL: test_additional14 (test_cases.TestCalc.test_additional14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 62, in test_additional14
+    self.assertEqual(-1, calc(0.1, 10))
+AssertionError: -1 != 1.0
+
+======================================================================
+FAIL: test_additional18 (test_cases.TestCalc.test_additional18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 74, in test_additional18
+    self.assertEqual(-1, calc('２', '６'))
+AssertionError: -1 != 12.0
+
+======================================================================
+FAIL: test_additional28 (test_cases.TestCalc.test_additional28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 104, in test_additional28
+    self.assertEqual(100, calc('+10', '+10'))
+AssertionError: 100 != -1
+
+======================================================================
+FAIL: test_sample4 (test_cases.TestCalc.test_sample4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:xxx\SDM-report2\test_cases.py", line 20, in test_sample4
+    self.assertEqual (-1, calc(0.1,999))
+AssertionError: -1 != 99.9
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.009s
+
+FAILED (failures=7, errors=8)
